@@ -1,0 +1,217 @@
+Lab 1.1 Project Description
+
+1. Project Overview
+
+Project Idea
+
+"Operation Guide" is a web-based platform designed to assist elderly users in effectively using smartphones and tablets. The platform provides step-by-step visual and textual instructions tailored for various applications and essential actions.
+
+Purpose and Significance
+
+The goal of this project is to bridge the digital divide for elderly individuals by offering intuitive guidance on performing basic tasks on mobile devices. This will empower users to independently navigate technology, reducing their reliance on external assistance.
+
+2. Objectives
+
+Providing User-Friendly Instructions:
+
+Ensure instructions are adapted to specific device models (smartphones and tablets).
+
+Include both graphical representations and textual descriptions.
+
+Enhancing Accessibility:
+
+Implement accessibility features such as large font size and high contrast mode.
+
+Offer shortcut setups to simplify user interaction.
+
+Interactive Guidance:
+
+Highlight active areas during the execution of instructions.
+
+Create an intuitive process for shortcut creation with clear tips.
+
+Automated Device Recognition:
+
+Detect the user’s device type (smartphone or tablet) and operating system (iOS or Android) to provide relevant instructions.
+
+Admin Features:
+
+Allow administrators to add new applications and instructions.
+
+Enable support message reception from users.
+
+3. Team Structure
+
+Backend Developer:
+
+Develops API and database structure.
+
+Implements device recognition and instruction retrieval logic.
+
+Frontend Developer:
+
+Designs and implements the user interface using HTML and CSS.
+
+Integrates visual elements and interactive features.
+
+UX Designer:
+
+Creates wireframes and prototypes with a focus on accessibility.
+
+Conducts usability testing and refines the design based on feedback.
+
+4. Task Breakdown
+
+Phase 1: Planning and Design
+
+Task 1: Define user needs and project scope.
+
+Responsible: UX Designer.
+
+Deliverable: User personas, wireframes, and initial prototypes.
+
+Phase 2: Backend Development
+
+Task 2: Set up database and implement backend logic.
+
+Responsible: Backend Developer.
+
+Deliverable: API for fetching instructions and receiving feedback.
+
+Phase 3: Frontend Development
+
+Task 3: Develop and integrate user interface.
+
+Responsible: Frontend Developer.
+
+Deliverable: Fully responsive web pages with interactive guidance.
+
+Phase 4: Integration and Testing
+
+Task 4: Integrate frontend with backend and perform testing.
+
+Responsible: Entire team.
+
+Deliverable: Fully functional platform.
+
+Phase 5: Finalization and Documentation
+
+Task 5: Gather feedback and finalize the platform.
+
+Responsible: UX Designer & Backend Developer.
+
+Deliverable: Final platform, documentation, and user manual.
+
+5. Final Deliverables
+
+A fully functional web-based platform with:
+
+Step-by-step instructions tailored for different applications.
+
+Features for shortcut creation and customization.
+
+Accessibility settings such as font size scaling and contrast adjustments.
+
+Comprehensive project documentation, including source code and user manuals.
+
+A final presentation summarizing project outcomes and user feedback.
+
+6. Collaboration Tools
+
+GitHub: Version control and collaborative development.
+
+GitHub Projects: Task management and tracking.
+
+Discord: Team communication and discussions.
+
+Figma: Wireframing and prototyping.
+
+Лабораторна робота 1.1: Опис проєкту
+
+1. Огляд проєкту
+
+Ідея проєкту
+
+“Operation Guide” — це веб-платформа, створена для допомоги літнім користувачам у використанні смартфонів та планшетів. Платформа надає покрокові візуальні та текстові інструкції, адаптовані для різних додатків і основних дій.
+
+Мета та значення
+
+Мета цього проєкту — зменшити цифровий розрив для літніх людей, надаючи їм інтуїтивно зрозумілі інструкції щодо виконання базових завдань на мобільних пристроях. Це дозволить користувачам самостійно освоювати технології, зменшуючи їхню залежність від сторонньої допомоги.
+
+2. Цілі
+
+Надання зручних інструкцій
+	•	Забезпечити інструкції, адаптовані до конкретних моделей пристроїв (смартфонів і планшетів).
+	•	Додати графічні схеми та текстові описи.
+
+Покращення доступності
+	•	Реалізувати функції доступності, такі як збільшений шрифт і висококонтрастний режим.
+	•	Запропонувати налаштування ярликів для спрощення взаємодії.
+
+Інтерактивний супровід
+	•	Підсвічувати активні зони під час виконання інструкцій.
+	•	Створити інтуїтивний процес створення ярликів із чіткими підказками.
+
+Автоматичне розпізнавання пристрою
+	•	Визначати тип пристрою користувача (смартфон або планшет) та операційну систему (iOS або Android), щоб надавати відповідні інструкції.
+
+Функціонал адміністратора
+	•	Надати адміністраторам можливість додавати нові додатки та інструкції.
+	•	Забезпечити отримання повідомлень від користувачів для підтримки.
+
+3. Структура команди
+
+Backend-розробник
+	•	Розробка API та структури бази даних.
+	•	Реалізація логіки розпізнавання пристроїв і отримання інструкцій.
+
+Frontend-розробник
+	•	Створення та впровадження користувацького інтерфейсу на основі HTML і CSS.
+	•	Інтеграція візуальних елементів та інтерактивних функцій.
+
+UX-дизайнер
+	•	Розробка вайрфреймів і прототипів із фокусом на доступності.
+	•	Проведення тестування юзабіліті та покращення дизайну на основі зворотного зв’язку.
+
+4. Розподіл завдань
+
+Фаза 1: Планування та дизайн
+	•	Завдання 1: Визначення потреб користувачів і меж проєкту.
+	•	Відповідальний: UX-дизайнер.
+	•	Результат: Персони користувачів, вайрфрейми та початкові прототипи.
+
+Фаза 2: Розробка бекенду
+	•	Завдання 2: Налаштування бази даних і реалізація бекенд-логіки.
+	•	Відповідальний: Backend-розробник.
+	•	Результат: API для отримання інструкцій і збору зворотного зв’язку.
+
+Фаза 3: Розробка фронтенду
+	•	Завдання 3: Створення та інтеграція користувацького інтерфейсу.
+	•	Відповідальний: Frontend-розробник.
+	•	Результат: Повністю адаптивні веб-сторінки з інтерактивними підказками.
+
+Фаза 4: Інтеграція та тестування
+	•	Завдання 4: Інтеграція фронтенду з бекендом і проведення тестування.
+	•	Відповідальні: Вся команда.
+	•	Результат: Повністю функціональна платформа.
+
+Фаза 5: Завершення та документація
+	•	Завдання 5: Збір зворотного зв’язку та фіналізація платформи.
+	•	Відповідальні: UX-дизайнер і Backend-розробник.
+	•	Результат: Фінальна версія платформи, документація та посібник користувача.
+
+5. Кінцеві результати
+	•	Функціональний веб-застосунок із:
+	•	Покроковими інструкціями, адаптованими до різних додатків.
+	•	Можливістю створення ярликів і персоналізації.
+	•	Опціями доступності, такими як масштабування шрифту та регулювання контрасту.
+	•	Документація проєкту:
+	•	Вихідний код.
+	•	Посібник користувача.
+	•	Презентація з підсумками проєкту та відгуками користувачів.
+
+6. Інструменти для співпраці
+	•	GitHub: Контроль версій та спільна розробка.
+	•	GitHub Projects: Управління завданнями та відстеження прогресу.
+	•	Discord: Комунікація команди.
+	•	Figma: Розробка вайрфреймів і прототипів.
