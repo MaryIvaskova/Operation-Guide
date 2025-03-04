@@ -1,3 +1,9 @@
+Дизайн
+[https://www.figma.com/design/SoNHHzi89lLluZ1ZCcuaOK/Цифровий-помічник(проектна-робота)?node-id=0-1&p=f](https://www.figma.com/design/SoNHHzi89lLluZ1ZCcuaOK/Цифровий-помічник(проектна-робота)?node-id=0-1&p=f)
+
+Презинтація 
+[https://www.canva.com/design/DAGgVcQ2MTE/ZQlzU8lpY5GA7df2y3P9Ww/edit?utm_content=DAGgVcQ2MTE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton]
+
 Operation Guide 📱📖
 
 Полегшуємо використання смартфонів та планшетів для людей поважного віку
