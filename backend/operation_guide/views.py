@@ -1,6 +1,5 @@
-
 from django.shortcuts import render, get_object_or_404
-from .models import App, Instruction, InstructionStep, Feedback
+from .models import App, Instruction, InstructionStep
 
 def home(request):
     return render(request, "operation_guide/home.html")
@@ -19,6 +18,13 @@ def instruction_detail(request, instruction_id):
     steps = InstructionStep.objects.filter(instruction=instruction)
     return render(request, "operation_guide/instruction_detail.html", {"instruction": instruction, "steps": steps})
 
-def feedback_view(request):
-    feedbacks = Feedback.objects.all().order_by('-date')
-    return render(request, "operation_guide/feedback.html", {"feedbacks": feedbacks})
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .models import Instruction
+from .serializers import InstructionSerializer
+
+@api_view(["GET"])
+def api_instruction_list(request):
+    instructions = Instruction.objects.all()
+    serializer = InstructionSerializer(instructions, many=True)
+    return Response(serializer.data)

@@ -1,8 +1,7 @@
-
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 
-# Менеджер для кастомного користувача
+# Менеджер користувачів
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -18,7 +17,7 @@ class CustomUserManager(BaseUserManager):
         extra_fields.setdefault("is_superuser", True)
         return self.create_user(email, password, **extra_fields)
 
-# Кастомна модель користувача
+# Користувач
 class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     username = None  # Видаляємо стандартне ім'я користувача
@@ -36,7 +35,6 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.email
 
-# 📌 Інші моделі (Пристрої, Застосунки, Інструкції тощо)
 class Device(models.Model):
     model = models.CharField(max_length=255)
     manufacturer = models.CharField(max_length=255)
@@ -70,24 +68,10 @@ class InstructionStep(models.Model):
     class Meta:
         ordering = ['step_number']
 
-class Feedback(models.Model):
-    instruction = models.ForeignKey(Instruction, on_delete=models.CASCADE)
-    comments = models.TextField()
-    rating = models.IntegerField(choices=[(1, '⭐'), (2, '⭐⭐'), (3, '⭐⭐⭐'), (4, '⭐⭐⭐⭐'), (5, '⭐⭐⭐⭐⭐')])
-    date = models.DateTimeField(auto_now_add=True)
-
-class Shortcut(models.Model):
-    instruction = models.ForeignKey(Instruction, on_delete=models.CASCADE)
-    label = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True)
-
 class AdBlock(models.Model):
     ad_text = models.TextField()
     image_url = models.URLField()
     target_url = models.URLField()
-    display_message = models.CharField(
-        max_length=255, default="Ось так виглядає реклама, на неї не варто натискати"
-    )
 
 class SupportLink(models.Model):
     platform = models.CharField(max_length=10, choices=[('Telegram', 'Telegram'), ('Viber', 'Viber')])
