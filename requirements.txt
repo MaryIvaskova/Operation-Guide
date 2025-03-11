@@ -1,0 +1,10 @@
+django
+djangorestframework
+psycopg2
+django-cors-headers
+django-redis
+pillow
+django-ckeditor
+celery
+PyPDF2
+djangorestframework-simplejwt
