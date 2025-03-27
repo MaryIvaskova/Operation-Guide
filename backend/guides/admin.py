@@ -21,7 +21,7 @@ class StepInline(admin.StackedInline):
     readonly_fields = ['preview_image']
 
     def preview_image(self, obj):
-        if obj.image:
+        if obj.image and hasattr(obj.image, 'url'):
             return mark_safe(f'<img src="{obj.image.url}" style="max-height: 200px;" />')
         return "(немає зображення)"
     preview_image.short_description = "Попередній перегляд"
@@ -34,8 +34,13 @@ class InstructionAdmin(admin.ModelAdmin):
     inlines = [StepInline]
 
     def has_delete_permission(self, request, obj=None):
-        # Лише суперкористувач може видаляти інструкції
         return request.user.is_superuser
+
+    def get_actions(self, request):
+        actions = super().get_actions(request)
+        if not request.user.is_superuser and 'delete_selected' in actions:
+            del actions['delete_selected']
+        return actions
 
 
 class AppAdmin(admin.ModelAdmin):
