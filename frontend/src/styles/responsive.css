@@ -1,0 +1,76 @@
+/* ========== Responsive Styles ========== */
+
+/* Mobile First */
+body {
+  font-size: 16px;
+  padding: 15px;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+
+/* Grid on mobile: stack elements */
+.programs-grid,
+.topics-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .programs-grid,
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  button {
+    width: auto;
+    font-size: 1.1rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 1280px) {
+  body {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .programs-grid,
+  .topics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
