@@ -1,4 +1,21 @@
 from pathlib import Path
+import dj_database_url
+import os
+
+DEBUG = False
+ALLOWED_HOSTS = ['.onrender.com']
+
+DATABASES = {
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+}
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ...
+]
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
