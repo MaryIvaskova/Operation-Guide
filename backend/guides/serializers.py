@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from .models import App, Instruction, Step, Feedback, Review
+from .models import Instruction, Program, Step, Feedback, Review, Topic
+
+
+class TopicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Topic
+        fields = '__all__'
 
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -31,20 +37,20 @@ class StepSerializer(serializers.ModelSerializer):
 
 class InstructionSerializer(serializers.ModelSerializer):
     steps = StepSerializer(many=True, read_only=True)
-    app_name = serializers.CharField(source='app.name', read_only=True)
-    app_os = serializers.CharField(source='app.os', read_only=True)
+    program_name = serializers.CharField(source='program.name', read_only=True)
+    program_os = serializers.CharField(source='program.os', read_only=True)
 
     class Meta:
         model = Instruction
         fields = [
             'id', 'title', 'description', 'category',
-            'created_at', 'views', 'app_name', 'app_os', 'steps'
+            'created_at', 'views', 'program_name', 'program_os', 'steps'
         ]
 
 
-class AppSerializer(serializers.ModelSerializer):
+class ProgramSerializer(serializers.ModelSerializer):
     class Meta:
-        model = App
+        model = Program
         fields = ['id', 'name', 'os']
 
 

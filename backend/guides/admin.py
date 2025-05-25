@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import App, Instruction, Step, Feedback
-from ckeditor.widgets import CKEditorWidget
 from django import forms
 from django.utils.safestring import mark_safe
+from ckeditor.widgets import CKEditorWidget
+
+from .models import Program, Instruction, Step, Feedback, Review, Topic
 
 
 class StepInlineForm(forms.ModelForm):
@@ -28,8 +29,8 @@ class StepInline(admin.StackedInline):
 
 
 class InstructionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'app', 'category', 'created_at', 'views']
-    list_filter = ['app', 'category', 'created_at']
+    list_display = ['title', 'program', 'category', 'created_at', 'views']
+    list_filter = ['program', 'category', 'created_at']
     search_fields = ['title', 'description']
     inlines = [StepInline]
 
@@ -43,7 +44,7 @@ class InstructionAdmin(admin.ModelAdmin):
         return actions
 
 
-class AppAdmin(admin.ModelAdmin):
+class ProgramAdmin(admin.ModelAdmin):
     list_display = ['name', 'os']
     list_filter = ['os']
     search_fields = ['name']
@@ -56,6 +57,8 @@ class FeedbackAdmin(admin.ModelAdmin):
     readonly_fields = ['text', 'instruction', 'created_at']
 
 
-admin.site.register(App, AppAdmin)
+admin.site.register(Program, ProgramAdmin)
 admin.site.register(Instruction, InstructionAdmin)
 admin.site.register(Feedback, FeedbackAdmin)
+admin.site.register(Topic)
+admin.site.register(Review)

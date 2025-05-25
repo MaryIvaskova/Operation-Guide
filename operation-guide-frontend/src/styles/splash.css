@@ -1,0 +1,44 @@
+/* src/pages/splash.css */
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.splash-logo {
+  text-align: center;
+}
+
+.splash-logo img {
+  width: 100px;
+  animation: pulse 1.5s infinite;
+}
+
+.splash-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}

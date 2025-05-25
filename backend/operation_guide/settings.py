@@ -1,7 +1,12 @@
 from pathlib import Path
 import dj_database_url
 import os
+from pathlib import Path
+import dj_database_url
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEBUG = False
 ALLOWED_HOSTS = ['.onrender.com']
 
@@ -39,6 +44,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'ckeditor',
     'django_filters',
+    'drf_yasg',
 
     # Local
     'guides',
